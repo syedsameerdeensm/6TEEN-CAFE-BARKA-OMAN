@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>6TEEN Cafe - Barka, Oman ☕</title>
+
+    <style>
+        body{
+            text-align:center;
+            font-family:Arial, sans-serif;
+            margin-top:120px;
+            background:#fff7f0;
+        }
+
+        h1{
+            color:#d35400;
+        }
+
+        h3{
+            color:#555;
+        }
+
+        button{
+            padding:12px 25px;
+            font-size:18px;
+            margin:15px;
+            cursor:pointer;
+            border:none;
+            border-radius:10px;
+        }
+
+        #yes{
+            background:#27ae60;
+            color:white;
+        }
+
+        #no{
+            background:#e74c3c;
+            color:white;
+            position:absolute;
+        }
+
+        img{
+            width:350px;
+            max-width:90%;
+            margin-top:20px;
+            border-radius:15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>☕ 6TEEN Cafe ☕</h1>
+    <h3>Barka, Oman 🇴🇲</h3>
+
+    <h2>Do You Love Our Cafe? ❤️</h2>
+    <h3>Give your feedback 😊</h3>
+
+    <button id="yes" onclick="showThanks()">❤️ Yes, I Love It!</button>
+    <button id="no">💡 Suggest Idea</button>
+
+    <script>
+        const noBtn = document.getElementById("no");
+
+        noBtn.addEventListener("mouseover", () => {
+            noBtn.style.left =
+                Math.random() * (window.innerWidth - 120) + "px";
+
+            noBtn.style.top =
+                Math.random() * (window.innerHeight - 60) + "px";
+        });
+
+        function showThanks() {
+            document.body.innerHTML = `
+                <h1>🎉 Thank You! 🎉</h1>
+                <h2>We’re happy you love 6TEEN Cafe ❤️</h2>
+
+                <img src="6teencafe.jpeg" alt="6TEEN Cafe Greeting">
+
+                <p>☕ Your feedback helps us improve every day!</p>
+                <p>Visit again soon 😊</p>
+            `;
+        }
+    </script>
+
+</body>
+</html>
