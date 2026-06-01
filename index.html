@@ -1,3 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6TEEN Cafe - Barka, Oman ☕</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, sans-serif;
+            background:#fff7f0;
+            text-align:center;
+        }
+
+        .container{
+            padding-top:80px;
+        }
+
+        h1{
+            color:#d35400;
+            font-size:50px;
+            margin-bottom:10px;
+        }
+
+        h2{
+            font-size:34px;
+            margin-bottom:10px;
+        }
+
+        h3{
+            color:#555;
+            font-size:24px;
+            margin-bottom:20px;
+        }
+
+        .buttons{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            margin-top:25px;
+        }
+
+        button{
+            padding:18px 35px;
+            font-size:26px;
+            border:none;
+            border-radius:12px;
+            cursor:pointer;
+        }
+
+        #yes{
+            background:#27ae60;
+            color:white;
+        }
+
+        #no{
+            background:#e74c3c;
+            color:white;
+            position:relative;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>☕ 6TEEN Cafe ☕</h1>
+
+    <h3>📍 Barka, Oman 🇴🇲</h3>
+
+    <h2>Do You Love Our Cafe? ❤️</h2>
+
+    <h3>We'd Love To Know What You Think 😊</h3>
+
+    <div class="buttons">
+        <button id="yes" onclick="showThanks()">
+            ❤️ Yes, I Love It!
+        </button>
+
+        <button id="no">
+            😅 Maybe Later
+        </button>
+    </div>
+
+</div>
+
+<script>
+
+const noBtn = document.getElementById("no");
+let moved = false;
+
+noBtn.addEventListener("mouseover", () => {
+
+    if(!moved){
+        noBtn.style.position = "absolute";
+        moved = true;
+    }
+
+    noBtn.style.left =
+        Math.random() * (window.innerWidth - 180) + "px";
+
+    noBtn.style.top =
+        Math.random() * (window.innerHeight - 80) + "px";
+});
+
 function showThanks() {
 
     document.body.innerHTML = `
@@ -61,3 +173,8 @@ function showThanks() {
         </div>
     `;
 }
+
+</script>
+
+</body>
+</html>
