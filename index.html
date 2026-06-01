@@ -16,6 +16,7 @@
             font-family:Arial, sans-serif;
             background:#fff7f0;
             text-align:center;
+            overflow-x:hidden;
         }
 
         .container{
@@ -44,6 +45,7 @@
             justify-content:center;
             gap:20px;
             margin-top:25px;
+            flex-wrap:wrap;
         }
 
         button{
@@ -63,6 +65,18 @@
             background:#e74c3c;
             color:white;
             position:relative;
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media(max-width:768px){
+            h1{font-size:34px;}
+            h2{font-size:24px;}
+            h3{font-size:18px;}
+
+            button{
+                font-size:18px;
+                padding:14px 20px;
+            }
         }
     </style>
 </head>
@@ -104,10 +118,10 @@ noBtn.addEventListener("mouseover", () => {
     }
 
     noBtn.style.left =
-        Math.random() * (window.innerWidth - 180) + "px";
+        Math.random() * (window.innerWidth - 120) + "px";
 
     noBtn.style.top =
-        Math.random() * (window.innerHeight - 80) + "px";
+        Math.random() * (window.innerHeight - 60) + "px";
 });
 
 function showThanks() {
@@ -121,50 +135,52 @@ function showThanks() {
             text-align:center;
             min-height:100vh;
             background:#fff7f0;
-            padding:40px 20px;
+            padding:20px;
+            overflow-x:hidden;
         ">
 
             <h1 style="
-                font-size:70px;
+                font-size:clamp(32px, 6vw, 60px);
                 color:#d35400;
-                margin-bottom:20px;
                 margin-top:20px;
             ">
                 🎉 THANK YOU! 🎉
             </h1>
 
             <h2 style="
-                font-size:45px;
-                margin-bottom:25px;
+                font-size:clamp(20px, 4.5vw, 40px);
+                margin-top:15px;
+                margin-bottom:20px;
             ">
                 We're Happy You Love 6TEEN Cafe ❤️
             </h2>
 
             <img src="6teencafe.jpeg"
                  style="
-                    width:500px;
-                    max-width:90%;
+                    width:90%;
+                    max-width:400px;
+                    height:auto;
                     border-radius:20px;
-                    margin:20px 0;
+                    margin:15px 0;
                  ">
 
             <p style="
-                font-size:34px;
+                font-size:clamp(18px, 4vw, 30px);
                 font-weight:bold;
-                margin-top:25px;
+                margin-top:20px;
             ">
                 ☕ Your Support Means A Lot To Us!
             </p>
 
             <p style="
-                font-size:30px;
-                margin-top:15px;
+                font-size:clamp(16px, 3.8vw, 26px);
+                margin-top:10px;
             ">
                 😊 We Look Forward To Serving You Again Soon
             </p>
 
             <h3 style="
-                font-size:32px;
+                font-size:clamp(18px, 4vw, 28px);
                 margin-top:20px;
             ">
                 📍 Barka, Oman 🇴🇲
